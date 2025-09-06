@@ -1,9 +1,8 @@
 import { test } "mo:test";
-import Debug "mo:base/Debug";
-import List "mo:core/List";
+import List "mo:core@1/List";
 import Buffer "../src";
-import OldBuffer "mo:base/Buffer";
-import Iter "mo:core/Iter";
+import OldBuffer "mo:base@0/Buffer";
+import Iter "mo:core@1/Iter";
 
 test(
   "fromList",
@@ -14,8 +13,8 @@ test(
     buffer.write(2);
 
     assert (List.size(list) == 2);
-    assert (List.get(list, 0) == 1);
-    assert (List.get(list, 1) == 2);
+    assert (List.at(list, 0) == 1);
+    assert (List.at(list, 1) == 2);
   },
 );
 
@@ -49,11 +48,11 @@ test(
     Buffer.writeMany(buffer, items);
 
     assert (List.size(list) == 5);
-    assert (List.get(list, 0) == 1);
-    assert (List.get(list, 1) == 2);
-    assert (List.get(list, 2) == 3);
-    assert (List.get(list, 3) == 4);
-    assert (List.get(list, 4) == 5);
+    assert (List.at(list, 0) == 1);
+    assert (List.at(list, 1) == 2);
+    assert (List.at(list, 2) == 3);
+    assert (List.at(list, 3) == 4);
+    assert (List.at(list, 4) == 5);
   },
 );
 

@@ -1,7 +1,6 @@
-import List "mo:core/List";
-import Array "mo:core/Array";
-import Iter "mo:core/Iter";
-import OldBuffer "mo:base/Buffer";
+import List "mo:core@1/List";
+import Iter "mo:core@1/Iter";
+import OldBuffer "mo:base@0/Buffer";
 
 module {
 
